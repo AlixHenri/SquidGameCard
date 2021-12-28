@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -85,4 +87,58 @@ section{
 
 .number {
     transform: rotateY(-180deg);
+}
+
+footer{
+    flex-shrink: 0;
+    font-family: 'IBM Plex Mono', monospace;;
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+footer a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.24);
+}
+
+footer a:hover{
+    color: white;
+}
+
+.line {
+    position: relative;
+    width: 17.6em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255, 255, 255, 0.24);
+    color: rgba(255, 255, 255, 0.24);
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;transform: translateY(-50%);
+}
+
+.typewriter {
+    animation: typewriter 4s steps(40) 1s 1 normal both,
+    blinkTextCursor 500ms steps(40) infinite normal;
+}
+
+
+@keyframes typewriter {
+    from {
+          width: 0;
+    }
+    to {
+          width: 17.6em;
+    }
+}
+
+@keyframes blinkTextCursor {
+    from {
+          border-right-color: rgba(255, 255, 255, 0.24);
+    }
+    to {
+          border-right-color: transparent;
+    }
 }
