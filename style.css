@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: radial-gradient(rgba(0, 0, 0, 0.973),black);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    overflow: hidden;
+    perspective: 1000px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100vw;
+    height: 100vh;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    background-image: url(img/brown-texture.jpg);
+    background-size: cover;
+    width: 450px;
+    height: 250px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+    background-color: beige;
+}
+
+.circle{
+    width: 100px;
+    height: 100px;
+    margin: 0 10px;
+    border: 2px solid black;
+    border-radius: 5rem;
+}
+
+.triangle{
+    width: 120px;
+    height: 100px;
+    margin: 0 10px;
+    border-bottom: 2px solid black;
+    position: relative;
+}
+
+.triangle::before{
+    content: '';
+    position: absolute;
+    top: -11px;
+    left: 30px;
+    border-left: 2px solid black;
+    transform: rotate(30deg);
+    height: 120%;
+}
+
+.triangle::after{
+    content: "";
+    position: absolute;
+    top: -11px;
+    right: 30px;
+    border-right: 2px solid black;
+    transform: rotate(-30deg);
+    height: 120%;
+}
+
+.square{
+    width: 100px;
+    height: 100px;
+    margin: 0 10px;
+    border: 2px solid black;
+}
+
+.back{
+    position: absolute;
+    z-index: -1;
+}
+
+.number {
+    transform: rotateY(-180deg);
+}
